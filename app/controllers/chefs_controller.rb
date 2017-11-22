@@ -10,6 +10,7 @@ class ChefsController < ApplicationController
   # GET /chefs/1
   # GET /chefs/1.json
   def show
+    @chefs = Chef.all
   end
 
   # GET /chefs/new
