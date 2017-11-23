@@ -11,6 +11,8 @@ class ChefsController < ApplicationController
   # GET /chefs/1.json
   def show
     @chefs = Chef.all
+    @recipes = Recipe.all
+
   end
 
   # GET /chefs/new
