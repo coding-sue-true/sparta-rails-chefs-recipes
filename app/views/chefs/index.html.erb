@@ -7,6 +7,7 @@
     <tr>
       <th>First name</th>
       <th>Last name</th>
+      <th>ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +17,7 @@
       <tr>
         <td><%= chef.first_name %></td>
         <td><%= chef.last_name %></td>
-        <td><%= chef.recipe.chef_id %> </td>
+        <td><%= chef.recipes.name %> </td>
         <td><%= link_to 'Show', chef %></td>
         <td><%= link_to 'Edit', edit_chef_path(chef) %></td>
         <td><%= link_to 'Destroy', chef, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,12 +30,13 @@
 
 <%= link_to 'New Chef', new_chef_path %>
 
-<h1>Chefs</h1>
+<h1>Recipes</h1>
 
 <table>
   <thead>
     <tr>
       <th>Recipes</th>
+      <th>Chef</th>
       <th>ID</th>
       <th colspan="3"></th>
     </tr>
@@ -44,6 +46,7 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= recipe.name %></td>
+        <td><%= recipe.chef.first_name %></td>
         <td><%= recipe.chef_id %></td>
         <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
