@@ -5,6 +5,7 @@ class ChefsController < ApplicationController
   # GET /chefs.json
   def index
     @chefs = Chef.all
+    @recipes = Recipe.all
   end
 
   # GET /chefs/1
