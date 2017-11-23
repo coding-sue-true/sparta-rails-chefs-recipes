@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <nav> <%= link_to 'Chefs', chefs_path(@chef) %> <%= link_to 'Recipes', recipes_path(@recipe) %> </nav>
     <%= yield %>
   </body>
 </html>
