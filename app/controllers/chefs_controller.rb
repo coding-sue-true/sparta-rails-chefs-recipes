@@ -13,7 +13,6 @@ class ChefsController < ApplicationController
   def show
     @chefs = Chef.all
     @recipes = Recipe.all
-
   end
 
   # GET /chefs/new
